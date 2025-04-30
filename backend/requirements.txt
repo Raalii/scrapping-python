@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+trafilatura>=1.6
+playwright
+langdetect
+chromadb
+openai==0.28.1
+python-multipart

@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  api:
+    build: ./backend
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_PATH=/data
+    volumes:
+      - chroma:/data
+    ports:
+      - "8000:8000"
+  web:
+    build: ./frontend-v2
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    ports:
+      - "3000:3000"
+volumes:
+  chroma:
