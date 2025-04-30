@@ -10,7 +10,7 @@ services:
     ports:
       - "8000:8000"
   web:
-    build: ./frontend-v2
+    build: ./frontend
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:8000
     ports:
